@@ -1,1 +1,6 @@
-
+html {
+  background-color:#FFEBCD;
+ /*  background-color:#F9DC24;*/
+  /*background-color:#EaE2D6;*/
+  background-blend-mode:overlay;
+}
