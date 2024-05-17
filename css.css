@@ -4,3 +4,7 @@ html {
   /*background-color:#EaE2D6;*/
   background-blend-mode:overlay;
 }
+textarea{
+  width:150px;
+  height:150px;
+}
