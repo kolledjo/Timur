@@ -8,10 +8,43 @@
     <link rel="stylesheet" href="css.css"> 
   </head>
   <body>
+    <script>
+    var el_up = document.getElementById("UP");
+    var el_down = document.getElementById("DOWN");
     
-   <p><textarea name='v3' maxlength='*'></textarea></p>
+    var el_text = document.getElementsByName('comment')[0];
+    var str = el_text.value;
+ 
+    el_up.innerHTML = str;
+ 
+    function camelCase(str) {
+        return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index)
+        {
+            return index == 0 ? word.toLowerCase() : word.toUpperCase();
+        }).replace(/\s+/g, '');
+    }
+ 
+    function Run() {
+        el_down.innerHTML = camelCase(el_text.value);
+    }
+      </script>
+    
+ 
+<h1 style="color:green;">
+    Введите текст
+</h1>
+ 
+<p id="UP" style="font-size: 15px; font-weight: bold;"></p>
+ 
+<textarea name="comment" cols="40" rows="3" style="text-align: center"></textarea>
+ 
 <br>
-    <p><textarea name='v8' maxlength='*'> </textarea></p>
+
+<button onclick="Run();">
+    click here
+</button>
+ 
+<p id="DOWN" style="color:green; font-size: 20px; font-weight: bold;"></p>
     <br>
   </body>
 </html>
